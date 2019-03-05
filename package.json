@@ -8,10 +8,15 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "cors": "*",
-    "express": "^4.16.3",
-    "mongoose": "^5.2.7"
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "monk": "^6.0.6"
   },
   "author": "Mattia Garassini",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/Garmatt/Indigo.git"
+  }
 }
