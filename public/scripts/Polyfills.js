@@ -1,4 +1,4 @@
-﻿if (!Array.prototype.filter)
+﻿if (!Array.prototype.filter) {
     Array.prototype.filter = function (func, thisArg) {
         'use strict';
         if (!((typeof func === 'Function' || typeof func === 'function') && this))
@@ -23,6 +23,7 @@
         res.length = c; // shrink down array to proper size
         return res;
     };
+}
 
 if (!Array.prototype.some) {
     Array.prototype.some = function (fun/*, thisArg*/) {
@@ -95,11 +96,11 @@ if (!Array.prototype.find) {
 }
 
 if (!Array.prototype.forEach) {
-
+	
     Array.prototype.forEach = function (callback/*, thisArg*/) {
-
+		
         var T, k;
-
+		
         if (this == null) {
             throw new TypeError('this is null or not defined');
         }
@@ -242,4 +243,28 @@ if (!Array.prototype.map) {
         // 9. return A
         return A;
     };
+}
+
+if (!Array.prototype.contains)
+{
+	Array.prototype.contains = function (v) {
+		for (var i = 0; i < this.length; i++) {
+			if (this[i] === v)
+				return true;
+		}
+		return false;
+	};
+}
+
+if (!Array.prototype.unique)
+{
+	Array.prototype.unique = function () {
+		var arr = [];
+		for (var i = 0; i < this.length; i++) {
+			if (!arr.contains(this[i])) {
+				arr.push(this[i]);
+			}
+		}
+		return arr;
+	};
 }

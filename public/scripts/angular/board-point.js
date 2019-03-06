@@ -1,4 +1,4 @@
-﻿angular.module('gameEngine').directive('boardPoint', function () {
+﻿angular.module('indigo').directive('boardPoint', function () {
     return {
         restrict: 'E',
         scope: {
@@ -55,7 +55,7 @@
             scope.background = GetBackgroundSource(scope.point.X, scope.point.Y, scope.point.Board);
 
             scope.$watch('point.Board.NextToPlay', function (newValue, oldValue) {
-                if (newValue && $.inArray('empty', scope.pointClass) >= 0)
+                if (newValue && /*$.inArray('empty', scope.pointClass)*/ scope.pointClass.indexOf('empty') >= 0)
                     scope.stone = 'stone-' + newValue;
             });
 
@@ -78,7 +78,7 @@
             });
 
         },
-        templateUrl: '/Scripts/Game/angular/templates/board-point.html'
+        templateUrl: 'scripts/angular/templates/board-point.html'
         //template: "<div ng-class='pointClass'><img ng-src='/Pictures/{{background}}.jpg' /><div class='stone'><img ng-src='/Pictures/{{stone}}.png' /></div></div>"
     };
 });

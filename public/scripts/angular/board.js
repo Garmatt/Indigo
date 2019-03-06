@@ -1,4 +1,4 @@
-﻿angular.module('gameEngine').directive('board', function () {
+﻿angular.module('indigo').directive('board', function () {
     return {
         restrict: 'E',
         scope: {
@@ -86,7 +86,7 @@
                 $scope.GameHistory.splice($scope.MoveIndex, $scope.GameHistory.length - $scope.MoveIndex, move);
             };
         }],
-        templateUrl: '/Scripts/Game/angular/templates/board.html'
+        templateUrl: 'scripts/angular/templates/board.html'
         //template: "<table class='goban playable' cellspacing='0'><tbody><tr ng-repeat='y in GetIndices() track by $index'><td ng-repeat='x in GetIndices() track by $index'><board-point point='Board.GetPoint($index, size - 1 - $parent.$index)' ng-click='MakeMove($index, size - 1 - $parent.$index)'></board-point></td></tr></tbody></table>"
     };
 });

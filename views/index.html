@@ -2,9 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>indiGo</title>
+    <title>IndiGo</title>
+    <link rel="stylesheet" href="style/general.css">
+	<link rel="stylesheet" href="style/board.css">
+	<script type="text/javascript" src="scripts/Polyfills.js"></script>
+	<script type="text/javascript" src="scripts/Color.js" ></script>
+	<script type="text/javascript" src="scripts/Point.js" ></script>
+	<script type="text/javascript" src="scripts/Group.js" ></script>
+	<script type="text/javascript" src="scripts/Board.js" ></script>
+	<script type="text/javascript" src="scripts/Move.js" ></script>
+	<script type="text/javascript" src="scripts/angular/angular.js" ></script>
+	<script type="text/javascript" src="scripts/angular/game-module.js" ></script>
+	<script type="text/javascript" src="scripts/angular/board-point.js" ></script>
+	<script type="text/javascript" src="scripts/angular/board.js" ></script>
   </head>
-  <body>
-  
+  <body ng-app='indigo'>
+	<board size='#size#' />
   </body>
 </html>
