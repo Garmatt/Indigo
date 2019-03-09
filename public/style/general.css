@@ -1,4 +1,20 @@
 ﻿body {
-    background-color: #000000;
+    background-color: #100e2b;
     color: #FFFFFF;
+	font-family:Verdana;
+}
+
+div > img {
+	max-width: 100%;
+}
+
+#login-container {
+	width: 600px;
+	margin: 2em auto;	
+	text-align: justify;
+	line-height: 1.5rem;
+}
+
+#login-container > div {
+	padding: 2em;
 }

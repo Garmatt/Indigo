@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>IndiGo</title>
+    <title>Indigo</title>
     <link rel="stylesheet" href="style/general.css">
 	<link rel="stylesheet" href="style/board.css">
 	<script type="text/javascript" src="scripts/Polyfills.js"></script>
@@ -17,6 +17,18 @@
 	<script type="text/javascript" src="scripts/angular/board.js" ></script>
   </head>
   <body ng-app='indigo'>
-	<board size='#size#' />
+	<div id="login-container">
+		<div>
+			<img src="pics/header.jpg"/>
+		</div>
+		<div>
+			<p>Welcome to Indigo, an online go playing portal.</p>
+			<p>Playing on Indigo is completely free and does not require installing any software.</p>
+			<p>Have fun!</p>
+		</div>
+		<div id="login-mask">
+		</div>
+	<!--<board size='#size#' />-->
+	</div>
   </body>
 </html>
