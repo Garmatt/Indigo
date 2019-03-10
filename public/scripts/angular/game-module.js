@@ -1,1 +1,1 @@
-﻿angular.module('indigo', []);
+﻿angular.module('indigo', ['pascalprecht.translate']);

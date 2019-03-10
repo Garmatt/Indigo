@@ -12,19 +12,27 @@
 	<script type="text/javascript" src="scripts/Board.js" ></script>
 	<script type="text/javascript" src="scripts/Move.js" ></script>
 	<script type="text/javascript" src="scripts/angular/angular.js" ></script>
+	<script type="text/javascript" src="scripts/angular/angular-translate.min.js" ></script>
 	<script type="text/javascript" src="scripts/angular/game-module.js" ></script>
+	<script type="text/javascript" src="scripts/angular/translate-config.js" ></script>
+	<script type="text/javascript" src="scripts/angular/language-controller.js" ></script>
 	<script type="text/javascript" src="scripts/angular/board-point.js" ></script>
 	<script type="text/javascript" src="scripts/angular/board.js" ></script>
   </head>
   <body ng-app='indigo'>
 	<div id="login-container">
+		<div ng-controller="languageController" id="language-menu">
+			<a href="#" ng-click="changeLanguage('en')">English</a>
+			|
+			<a href="#" ng-click="changeLanguage('it')">Italiano</a>
+		</div>
 		<div>
 			<img src="pics/header.jpg"/>
 		</div>
 		<div>
-			<p>Welcome to Indigo, an online go playing portal.</p>
-			<p>Playing on Indigo is completely free and does not require installing any software.</p>
-			<p>Have fun!</p>
+			<p translate="WELCOME1">Welcome to Indigo, an online go playing portal.</p>
+			<p translate="WELCOME2">Playing on Indigo is completely free and does not require installing any software.</p>
+			<p translate="WELCOME3">Have fun!</p>
 		</div>
 		<div id="login-mask">
 		</div>
