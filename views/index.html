@@ -22,23 +22,38 @@
 	<script type="text/javascript" src="scripts/angular/board.js" ></script>
   </head>
   <body ng-app='indigo'>
-	<div id="login-container">
-		<div ng-controller="languageController" id="language-menu">
-			<a href="#" ng-click="changeLanguage('en')">English</a>
-			|
-			<a href="#" ng-click="changeLanguage('it')">Italiano</a>
+	<div id="login-container" class="grid">
+		<div class="row">
+			<div class="col-xs-12">
+				<div ng-controller="languageController" id="language-menu">
+					<a href="#" ng-click="changeLanguage('en')">English</a>
+					|
+					<a href="#" ng-click="changeLanguage('it')">Italiano</a>
+				</div>	
+			</div>
 		</div>
-		<div>
-			<img src="pics/header.jpg"/>
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="img-header">
+					<img src="pics/header.jpg"/>
+				</div>
+			<!--<board size='#size#' />-->
+			</div>
 		</div>
-		<div>
-			<p translate="WELCOME1">Welcome to Indigo, an online go playing portal.</p>
-			<p translate="WELCOME2">Playing on Indigo is completely free and does not require installing any software.</p>
-			<p translate="WELCOME3">Have fun!</p>
+		<div class="row">
+			<div class="col-xs-12 col-m-8">
+					<p translate="WELCOME1">Welcome to Indigo, an online go playing portal.</p>
+					<p translate="WELCOME2">Playing on Indigo is completely free and does not require installing any software.</p>
+					<p translate="WELCOME3">Have fun!</p>
+			</div>
+			<div class="col-xs-12 col-m-4">		
+					<form id="login-mask">
+						<p><input type="text" placeholder="Username or email" /></p>
+						<p><input type="password" placeholder="Password"</p>
+						<p><input type="submit" value="Enter"></input></p>
+					</form>
+			</div>
 		</div>
-		<div id="login-mask">
-		</div>
-	<!--<board size='#size#' />-->
 	</div>
   </body>
 </html>
