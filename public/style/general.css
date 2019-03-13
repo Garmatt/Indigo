@@ -43,14 +43,14 @@ input[type="text"].error, input[type="password"].error, textarea.error {
 	text-align: right;
 }
 
-#language-menu a {
+a {
 	text-decoration: underline;
-	color: #FFFFFF;
+	color: #C9863D;
 }
 
-#language-menu a:hover,
-#language-menu a:active {
-	color: #C9863D;
+a:hover,
+a:active {
+	color: #FFFFFF;
 }
 
 #login-container {

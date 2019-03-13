@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/general.css">
 	<link rel="stylesheet" href="style/grid.css">
 	<link rel="stylesheet" href="style/board.css">
+	<!-- <link rel="stylesheet" href="style/fontawesome/all.css"> -->
 	<script type="text/javascript" src="scripts/Polyfills.js"></script>
 	<script type="text/javascript" src="scripts/Color.js" ></script>
 	<script type="text/javascript" src="scripts/Point.js" ></script>
@@ -47,14 +48,14 @@
 					<p translate="WELCOME2">Playing on Indigo is completely free and does not require installing any software.</p>
 					<p translate="WELCOME3">Have fun!</p>
 			</div>
-			<div class="col-xs-12 col-m-4">		
+			<div class="col-xs-12 col-m-4" ng-controller="loginController">		
 					<form id="login-mask">
 						<div class="input-wrapper">
-							<input type="text" id="txt-user" placeholder="Username or email" translate translate-attr-placeholder="LOGIN_USER">
+							<input type="text" id="txt-user" ng-model="NameOrMail" placeholder="Username or email" translate translate-attr-placeholder="LOGIN_USER">
 							<label for="txt-user" class="fa fa-user input-icon"></label>
 						</div>
 						<div class="input-wrapper">
-							<input type="password" id="txt-password" placeholder="Password" translate translate-attr-placeholder="LOGIN_PASSWORD">
+							<input type="password" id="txt-password" ng-model="Password" placeholder="Password" translate translate-attr-placeholder="LOGIN_PASSWORD">
 							<label for="txt-password" class="fa fa-lock input-icon"></label>
 						</div>
 						<div class="error">&nbsp;</div>
