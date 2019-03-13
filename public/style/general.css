@@ -67,15 +67,20 @@ input[type="text"].error, input[type="password"].error, textarea.error {
 	display: block;
 }
 
-#login-container [class*="col-"] /*> div*/ {
-	padding: 1.5em;
+#login-container .row {
+	padding: 2em 0em;
+}
+
+#login-container [class*="col-"] {
+	padding: 0em 2em;
 }
 
 #login-mask {
 	display: block;
-	/*max-width: 400px;*/
+	padding: 1em;
 	margin: 0em auto;
-	line-height: initial;
+	line-height: initial;	
+	background: rgba(0,0,0,0.2);
 }
 
 #login-mask div,
