@@ -4,8 +4,35 @@
 	font-family:"Lucida Sans", Verdana, sans-serif;
 }
 
+input[type="text"], input[type="password"], textarea, .call-to-action {
+	padding: 0.4em;
+}
+
+#txt-user, #txt-password {
+	padding-left: 2.2em;
+}
+
+.input-wrapper{
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.6em;
+  top: calc(50% - 0.5em);
+  color: #666666;
+  font-size: 0.8em;
+}
+
+.call-to-action {
+	color: #100E2B;
+	font-weight: bold;
+	border: none;
+}
+
 div.error, p.error, span.error {
 	color: #FF554F;
+	font-size: 0.8em;
 }
 
 input[type="text"].error, input[type="password"].error, textarea.error {
@@ -30,7 +57,7 @@ input[type="text"].error, input[type="password"].error, textarea.error {
 	max-width: 800px;
 	margin: 2em auto;	
 	text-align: justify;
-	line-height: 1.5rem;
+	line-height: 1.5em;
 }
 
 #img-header {
@@ -48,10 +75,23 @@ input[type="text"].error, input[type="password"].error, textarea.error {
 	display: block;
 	/*max-width: 400px;*/
 	margin: 0em auto;
+	line-height: initial;
 }
 
-#login-mask * {
+#login-mask div,
+#login-mask input[type="text"],
+#login-mask input[type="password"],
+#login-mask input[type="submit"] {
 	width: 100%;
+}
+
+#login-mask div.error,
+#login-mask input[type="submit"] {
+	margin-top: 0.5em;
+}
+
+#chkb-rmb {
+	margin: 1.5em 0.5em 0em 0em;
 }
 
 input[type="submit"] {

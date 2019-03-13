@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="scripts/angular/language-controller.js" ></script>
 	<script type="text/javascript" src="scripts/angular/board-point.js" ></script>
 	<script type="text/javascript" src="scripts/angular/board.js" ></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body ng-app='indigo'>
 	<div id="login-container" class="grid">
@@ -48,9 +49,17 @@
 			</div>
 			<div class="col-xs-12 col-m-4">		
 					<form id="login-mask">
-						<p><input type="text" placeholder="Username or email" /></p>
-						<p><input type="password" placeholder="Password"</p>
-						<p><input type="submit" value="Enter"></input></p>
+						<div class="input-wrapper">
+							<input type="text" id="txt-user" placeholder="Username or email" translate translate-attr-placeholder="LOGIN_USER">
+							<label for="txt-user" class="fa fa-user input-icon"></label>
+						</div>
+						<div class="input-wrapper">
+							<input type="password" id="txt-password" placeholder="Password" translate translate-attr-placeholder="LOGIN_PASSWORD">
+							<label for="txt-password" class="fa fa-lock input-icon"></label>
+						</div>
+						<div class="error">&nbsp;</div>
+						<div><input type="submit" value="Enter" class="call-to-action"></div>
+						<div><input type="checkbox" id="chkb-rmb"><label for="chkb-rmb">Remember me</label></div>
 					</form>
 			</div>
 		</div>
