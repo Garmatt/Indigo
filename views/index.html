@@ -45,22 +45,22 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12 col-m-8">
+			<div class="col-xs-12 col-m-7">
 					<p translate="WELCOME1">Welcome to Indigo, an online go playing portal.</p>
 					<p translate="WELCOME2">Playing on Indigo is completely free and does not require installing any software.</p>
 					<p translate="WELCOME3">Have fun!</p>
 			</div>
-			<div class="col-xs-12 col-m-4" ng-controller="loginController">		
+			<div class="col-xs-12 col-m-5" ng-controller="loginController">		
 					<form id="login-mask">
 						<div class="input-wrapper">
-							<input type="text" id="txt-user" ng-model="user.name" placeholder="Username or email" translate translate-attr-placeholder="LOGIN_USER">
+							<input type="text" id="txt-user" ng-model="user.name" ng-class="{'error': wrongField === 'user'}" placeholder="Username or email" translate translate-attr-placeholder="LOGIN_USER">
 							<label for="txt-user" class="fa fa-user input-icon"></label>
 						</div>
 						<div class="input-wrapper">
-							<input type="password" id="txt-password" ng-model="user.password" placeholder="Password" translate translate-attr-placeholder="LOGIN_PASSWORD">
+							<input type="password" id="txt-password" ng-model="user.password" ng-class="{'error': wrongField === 'password'}" placeholder="Password" translate translate-attr-placeholder="LOGIN_PASSWORD">
 							<label for="txt-password" class="fa fa-lock input-icon"></label>
 						</div>
-						<div class="error">{{errorMessage}}&nbsp;</div>
+						<div class="error" translate="{{errorMessageKey}}">&nbsp;</div>
 						<div><input type="submit" value="Enter" class="call-to-action" ng-click="Submit()"></div>
 						<div><input type="checkbox" id="chkb-rmb"><label for="chkb-rmb">Remember me</label></div>
 					</form>

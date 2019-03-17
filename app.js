@@ -4,6 +4,7 @@ var path = require('path');
 //var logger = require('morgan');
 var favicon = require('serve-favicon');
 var passport = require('passport');
+var bodyParser = require('body-parser');
 
 require('./models/db');
 require('./config/passport');
@@ -12,6 +13,9 @@ var indexRouter = require('./routes/index');
 var accountRouter = require('./routes/account');
 
 var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('./htmlEngine'));

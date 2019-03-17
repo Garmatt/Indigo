@@ -22,7 +22,7 @@ module.exports.register = function(req, res) {
   });
 };
 
-module.exports.login = function(req, res) {
+module.exports.login = function(req, res, next) {
 	
 	//TO DO: VALIDATION
 
@@ -46,6 +46,6 @@ module.exports.login = function(req, res) {
       // If user is not found
       res.status(401).json(info);
     }
-  })(req, res);
+  })(req, res, next);
 
 };

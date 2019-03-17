@@ -7,18 +7,21 @@ passport.use(new LocalStrategy({
     usernameField: 'name'
   },
   function(username, password, done) {
-    User.findOne({ name: username }, function (err, user) {
+	  var criteria = (username.indexOf('@') === -1) ? {name: username} : {email: username};
+    User.findOne(criteria, function (err, user) {
       if (err) { return done(err); }
       // Return if user not found in database
       if (!user) {
         return done(null, false, {
-          message: 'User not found'
+          messageKey: 'ERR_USER_NOT_FOUND',
+		  errorField: 'user'
         });
       }
       // Return if password is wrong
       if (!user.validPassword(password)) {
         return done(null, false, {
-          message: 'Password is wrong'
+          messageKey: 'ERR_PASSWORD',
+		  errorField: 'password'
         });
       }
       // If credentials are correct, return the user object

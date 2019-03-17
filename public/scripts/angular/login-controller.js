@@ -1,13 +1,17 @@
 angular.module('indigo').controller('loginController', function ($scope, $http) {
-	$scope.errorMessage = '';	
+	$scope.errorMessageKey = '';
+	$scope.wrongField = '';	
 	$scope.user = {name:'', password:''};
 		
   $scope.Submit = function() {
-	  $scope.errorMessage = '';
+	  $scope.errorMessageKey = '';
+	  $scope.wrongField = '';
 	  $http.post('/account/login', $scope.user).then(function(response){
-		  alert(response.data.toString()); //TO DO: redirect to home page
+		  alert(response.data.toString()); //TO DO: save JWT and redirect to home page
 	  }, function(error) {
-		  $scope.errorMessage = error.data.message;
+		  var errorInfo = error.data;
+		  $scope.errorMessageKey = errorInfo.messageKey;
+		  $scope.wrongField = errorInfo.errorField;
 	  });
   }
   
