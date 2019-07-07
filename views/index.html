@@ -53,11 +53,11 @@
 			<div class="col-xs-12 col-m-5" ng-controller="loginController">		
 					<form id="login-mask">
 						<div class="input-wrapper">
-							<input type="text" id="txt-user" ng-model="user.name" ng-class="{'error': wrongField === 'user'}" placeholder="Username or email" translate translate-attr-placeholder="LOGIN_USER">
+							<input type="text" id="txt-user" ng-model="user.name" ng-class="{'error': wrongField.indexOf('user') > -1 }" placeholder="Username or email" translate translate-attr-placeholder="LOGIN_USER">
 							<label for="txt-user" class="fa fa-user input-icon"></label>
 						</div>
 						<div class="input-wrapper">
-							<input type="password" id="txt-password" ng-model="user.password" ng-class="{'error': wrongField === 'password'}" placeholder="Password" translate translate-attr-placeholder="LOGIN_PASSWORD">
+							<input type="password" id="txt-password" ng-model="user.password" ng-class="{'error': wrongField.indexOf('password') > -1}" placeholder="Password" translate translate-attr-placeholder="LOGIN_PASSWORD">
 							<label for="txt-password" class="fa fa-lock input-icon"></label>
 						</div>
 						<div class="error" translate="{{errorMessageKey}}">&nbsp;</div>
