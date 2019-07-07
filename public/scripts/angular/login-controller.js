@@ -7,7 +7,7 @@ angular.module('indigo').controller('loginController', function ($scope, $http) 
 	  $scope.errorMessageKey = '';
 	  $scope.wrongField = '';
 	  $http.post('/account/login', $scope.user).then(function(response){
-		  alert(response.data.toString()); //TO DO: save JWT and redirect to home page
+		  alert(response.data.toString()); //TO DO: save JWT (using AuthenticationService) and redirect to home page
 	  }, function(error) {
 		  var errorInfo = error.data;
 		  if ('messageKey' in errorInfo && 'errorField' in errorInfo) {
