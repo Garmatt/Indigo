@@ -10,8 +10,14 @@ angular.module('indigo').controller('loginController', function ($scope, $http) 
 		  alert(response.data.toString()); //TO DO: save JWT (using AuthenticationService) and redirect to home page
 	  }, function(error) {
 		  var errorInfo = error.data;
-		  $scope.errorMessageKey = errorInfo.messageKey;
-		  $scope.wrongField = errorInfo.errorField;
+		  if ('messageKey' in errorInfo && 'errorField' in errorInfo) {
+			$scope.errorMessageKey = errorInfo.messageKey;
+			$scope.wrongField = [errorInfo.errorField];
+		  }
+		  else if ('message' in errorInfo && errorInfo.message === 'Missing credentials') {
+			$scope.errorMessageKey = 'ERR_MISSING_CREDENTIALS';
+			$scope.wrongField = ['user', 'password'];			  
+		  }			  
 	  });
   }
   

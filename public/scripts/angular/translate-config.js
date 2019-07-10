@@ -5,6 +5,7 @@ angular.module('indigo').config(function ($translateProvider) {
     WELCOME3: 'Have fun!',
 	LOGIN_USER: 'Username or email',
 	LOGIN_PASSWORD: 'Password',
+	ERR_MISSING_CREDENTIALS: 'Please fill the form.',
 	ERR_USER_NOT_FOUND: 'User not found.',
 	ERR_PASSWORD: 'Wrong password.'
   });
@@ -14,6 +15,7 @@ angular.module('indigo').config(function ($translateProvider) {
     WELCOME3: 'Buon divertimento!',
 	LOGIN_USER: 'Nome utente o indirizzo email',
 	LOGIN_PASSWORD: 'Password',
+	ERR_MISSING_CREDENTIALS: 'Inserire utente e password.',
 	ERR_USER_NOT_FOUND: 'Utente non trovato.',
 	ERR_PASSWORD: 'Password errata.'
   });
