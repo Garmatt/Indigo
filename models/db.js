@@ -5,7 +5,8 @@ var dbURI = 'mongodb://localhost/indigo';
 //  dbURI = process.env.MONGOLAB_URI; //this is for deploying on Heroku or something
 //}
 
-mongoose.connect(dbURI);
+mongoose.set('useCreateIndex', true);
+mongoose.connect(dbURI, { useNewUrlParser: true });
 
 // CONNECTION EVENTS
 mongoose.connection.on('connected', function() {
