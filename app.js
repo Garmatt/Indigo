@@ -18,8 +18,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('views', path.join(__dirname, 'views'));
-app.engine('html', require('./htmlEngine'));
-app.set('view engine', 'html');
+//app.engine('html', require('./htmlEngine'));
+//app.set('view engine', 'html');
+//app.engine('ejs', require('ejs'));
+const ejs = require('ejs'); // not needed?
+app.set('view engine', 'ejs');
 
 //app.use(logger('dev'));
 //app.use(express.json());
