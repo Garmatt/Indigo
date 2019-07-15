@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indigo</title>
-    <link rel="stylesheet" href="style/general.css">
-	<link rel="stylesheet" href="style/grid.css">
-	<!-- <link rel="stylesheet" href="style/fontawesome/all.css"> -->
-	<script type="text/javascript" src="scripts/Polyfills.js"></script>
+    <% include partials/head %>
+			
+	<!-- <!-- <link rel="stylesheet" href="style/fontawesome/all.css"> -->
+	
+	<!--<link rel="stylesheet" href="style/board.css"> -->
+	
+	<!-- <script type="text/javascript" src="scripts/Polyfills.js"></script>
+	<script type="text/javascript" src="scripts/Color.js" ></script>
+	<script type="text/javascript" src="scripts/Point.js" ></script>
+	<script type="text/javascript" src="scripts/Group.js" ></script>
+	<script type="text/javascript" src="scripts/Board.js" ></script>
+	<script type="text/javascript" src="scripts/Move.js" ></script>
+	<script type="text/javascript" src="scripts/angular/game-module.js" ></script>
+	<script type="text/javascript" src="scripts/angular/board-point.js" ></script>
+	<script type="text/javascript" src="scripts/angular/board.js" ></script>
+	-->
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
 	<script type="text/javascript" src="scripts/angular/angular.js" ></script>
 	<script type="text/javascript" src="scripts/angular/angular-translate.min.js" ></script>
-	<script type="text/javascript" src="scripts/angular/game-module.js" ></script>
 	<script type="text/javascript" src="scripts/angular/translate-config.js" ></script>
 	<script type="text/javascript" src="scripts/angular/language-controller.js" ></script>
 	<script type="text/javascript" src="scripts/angular/authentication-service.js" ></script>
+	<script type="text/javascript" src="scripts/angular/login-controller.js" ></script>	
   </head>
   <body ng-app='indigo'>
 	<div id="signup-container" class="grid">
-		<div class="row">
-			<div class="col-xs-12">
-				<div ng-controller="languageController" id="language-menu">
-					<a href="#" ng-click="changeLanguage('en')">English</a>
-					|
-					<a href="#" ng-click="changeLanguage('it')">Italiano</a>
-				</div>	
-			</div>
-		</div>
+		<% include partials/global-gateway %>
 		<form id="signup-form">
 		<div class="row" ng-controller="signupController">
 			<div class="col-xs-12 col-m-6" >	

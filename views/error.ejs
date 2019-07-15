@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>IndiGo- ERROR!</title>
-    <link rel="stylesheet" href="style/general.css">
+    <% include partials/head %>    
   </head>
-  <body ng-app='indigo'>
-	<board size='#size#' />
+  <body>
 	<h1><%= message %></h1>
 	<h2><%= error.status %></h2>
 	<div><%= error.stack %></div>
